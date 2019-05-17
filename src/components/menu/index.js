@@ -4,9 +4,9 @@ import './style.css';
 
 const MenuList = [
   { text: '总览' ,url:'/'},
-  { text: '公共安全' ,url:'/safety'},
-  { text: '公共服务' ,url:'/service'},
   { text: '公共管理' ,url:'/management'},
+  { text: '公共安全' ,url:'/safety'},
+  // { text: '公共服务' ,url:'/service'},
   { text: '视频' ,url:'/moniter'},
 ]
 
