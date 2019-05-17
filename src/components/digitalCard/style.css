@@ -1,0 +1,50 @@
+.digitalCardContainer{
+  width: 300px;
+  background-color: rgba(13, 69, 153, 0.5);
+  padding: 20px 30px;
+  margin: 0 20px;
+}
+
+.cardTitle{
+  font-weight: 500;
+  font-size: 20px;
+  color: white;
+  padding: 10px 0;
+}
+
+.cardContent{
+  display: flex;
+  padding: 10px 0;
+}
+
+.cardItemContent{
+  display: flex;
+  flex-direction: column;
+}
+
+.itemContent{
+  display: flex;
+  width: 50%;
+}
+
+.itemIcon{
+  width: 60px;
+  height: 60px;
+  border: 1px solid aquamarine;
+}
+
+.itemContext{
+  display: flex;
+  margin-left: 10px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.itemTitle{
+  color: white;
+}
+
+.itemNumber{
+  color: white;
+  font-size: 30px;
+} 
