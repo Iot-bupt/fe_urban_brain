@@ -1,6 +1,7 @@
 import React,{ Component } from 'react'
 import{BrowserRouter as Router,Route,Link,Redirect,withRouter,Switch} from "react-router-dom";
 import pin2 from './static/images/pin2.png';
+import room815 from './static/images/3.JPG';
 class ThreeDMap extends Component {
   constructor(){
     super();
@@ -20,13 +21,13 @@ class ThreeDMap extends Component {
     var PSV = new window.PhotoSphereViewer({
       // 全景图片路径
     //  panorama: 'Bryce-Canyon-National-Park-Mark-Doliner.jpg',
-      panorama: './static/images/二居室.jpeg',
+      panorama: room815,
       // 容器
       container: div,
       //标题
       caption:"",
       // 关闭动画
-      time_anim: false,
+      //time_anim: false,
       //鱼眼镜头
       fisheye:true,
       // 显示导航栏
