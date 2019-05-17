@@ -26,7 +26,14 @@ class OverView extends Component {
       <div className="overViewContainer">
         <img src={backgroundImgUrl} alt="背景图" className="backgroundImg"/>
         <div className="chartWrap">
-          <DigitalCard {...CHARGING_PILE_DATA} />
+          <div className="DigitalCardWrap_1">
+            <DigitalCard {...CHARGING_PILE_DATA} />
+            <DigitalCard {...CHARGING_PILE_DATA} />
+          </div>
+          <div className="DigitalCardWrap_1">
+            <DigitalCard {...CHARGING_PILE_DATA} />
+            <DigitalCard {...CHARGING_PILE_DATA} />
+          </div>
         </div>
       </div>
     )

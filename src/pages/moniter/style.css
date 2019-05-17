@@ -1,11 +1,63 @@
-.moniterContainer{
+@import '~antd/dist/antd.css';
+.publicSafetyContainer{
   width: 100%;
   height: 100%;
 }
+.logo {
+  height: 32px;
+  background: rgb(86, 86, 88);
+  margin: 16px;
+  font-size: 24px;
+  text-align: center;
+}
+.publicSafetyWrap{
+  width:100%;
+  height:100%;
+}
+.cesium-widget-credits{
+  display: none!important;
+  visibility: hide!important;
+}
+@font-face {font-family: "iconfont";
+  src: url('//at.alicdn.com/t/font_1185530_perea4931jk.eot?t=1557483416537'); /* IE9 */
+  src: url('//at.alicdn.com/t/font_1185530_perea4931jk.eot?t=1557483416537#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAKsAAsAAAAABngAAAJdAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcAqBBIEOATYCJAMICwYABCAFhG0HLxuzBcgekiRFUvHgYMaqAAWhiIfv137n7r5vhiXVxNA9miSTRKI0EsT2mc50QrQS9mpNNwSuEk8WQ7JAKB/3Hvj+Qq5oRHXG18iojg/aqo4v5wNmvc9zOb1r+AKZH6Tc5hg0qRdgHFBge2IUWQEFFnnD2AUu4T6BunFzIrs7R1eQlljLAvFiaBKkcxFJYvmqUK7Zm8SHkmr2ln0B7+Hn418l0mRKOavp6HlbhbWftl0UuyvuXPqEKAEdLiHHKpCIs9rMgZhg7Ji6cNw0kKT4T/u/wDaxV7Ngf51V2wSjUHJPUld2q9/MQEIVk8DaqBjVZE2+u6lfizez17cXs+e3ofKG2Kb0VFwuGl3t9Votd33nXVYGipKTtEFdzMvywDHOviTOwR+gcE3KKQ2MvFT/HVgDKPr5Z74GEQR7zz+fgqWrjQS+v/3CUNFP+vlAddfe4BdJe/YlXW5Zs6RKawuZSelTt9TVUcCBAcOxhuH7KYSq4bvyVYylyFXNkom+ipKGdZRVbaBuxe7hhkFMTKQalj0DhK5XZNr6yHW9kYk+QMmID5R1I4a6ixg5s2E+jOwmQ4mjSuQmMRTPpY6dZ6P6C9SqtsSy8pBzgyw04qRcKBXzu+gim2NDWNMqnFNCmeeQHfAY2rZHfOaZqPCCzrm/UCzSuhcVFM+BrB0MknBIRciaCIPC46L+cC5bev8FpKmySVhLT030BmJCxvhEWUGpB7mrcXv13MszoRpNBcdRBMV4HMQOmIVsNg/h188yIQVXoI9I+RYU7UG0r6awvs75uiNQZxmzsKfkSq9VGxkAAAAA') format('woff2'),
+  url('//at.alicdn.com/t/font_1185530_perea4931jk.woff?t=1557483416537') format('woff'),
+  url('//at.alicdn.com/t/font_1185530_perea4931jk.ttf?t=1557483416537') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('//at.alicdn.com/t/font_1185530_perea4931jk.svg?t=1557483416537#iconfont') format('svg'); /* iOS 4.1- */
+}
 
-.backgroundImg{
-  width: 100%;
-  height: 100%;
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.iconruler:before {
+  content: "\e8c7";
+}
+
+.graphicWrap_1{
   position: fixed;
+  top: 50px;
   left: 0;
+  z-index: 200;
+}
+
+.graphicWrap_2{
+  position: fixed;
+  top: 50px;
+  right: 0;
+  z-index: 200;
+}
+
+.moniterWrap{
+  position: fixed;
+  top: 200px;
+  width: 100px;
+  height: 50px;
+  left: 400px;
+  z-index: 200;
 }
