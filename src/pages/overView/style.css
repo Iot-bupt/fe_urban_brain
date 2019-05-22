@@ -1,24 +1,21 @@
 .overViewContainer{
   width: 100%;
-  height: 100%;
-}
-
-.backgroundImg{
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  left: 0;
-}
-
-.chartWrap{
-  position: relative;
-  z-index: 10;
-  /* background-color: rgba(43, 177, 16, 0.5) 用于测试 */
-}
-
-.DigitalCardWrap_1{
   display: flex;
   flex-direction: row;
+}
+
+.DigitalCardWrap{
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
   padding: 20px 40px;
+  flex: 1;
+}
+
+.MiddleCardWrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 40px;
+  flex: 2;
 }

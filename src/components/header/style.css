@@ -1,0 +1,19 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  border-bottom: 1px solid #2a4e99;
+  background-color: rgb(32,39,55);
+}
+
+.title{
+  display: flex;
+  flex-direction: row;
+}
+
+.text{
+  font-size: 23px;
+  padding-right: 20px;
+  color:rgba(225,225,225,0.8);
+  justify-content: center;
+}

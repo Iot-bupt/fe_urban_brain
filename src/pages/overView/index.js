@@ -1,10 +1,24 @@
-import React,{ Component } from 'react'
+import React, { Component } from 'react'
 import './style.css';
 
-import backgroundImgUrl from './../../static/image/world.jpg'
 import DigitalCard from '../../components/digitalCard';
 
 const CHARGING_PILE_DATA = {
+  title: '停车地磁使用情况',
+  items: [
+    {
+      icon: '',
+      name: '已用',
+      count: 10,
+    },
+    {
+      icon: '',
+      name: '空闲',
+      count: 17,
+    }
+  ]
+}
+const CHARGING_PILE_STATUS = {
   title: '充电桩使用情况',
   items: [
     {
@@ -21,19 +35,19 @@ const CHARGING_PILE_DATA = {
 }
 
 class OverView extends Component {
-  render(){
+  render() {
     return (
       <div className="overViewContainer">
-        <img src={backgroundImgUrl} alt="背景图" className="backgroundImg"/>
-        <div className="chartWrap">
-          <div className="DigitalCardWrap_1">
-            <DigitalCard {...CHARGING_PILE_DATA} />
-            <DigitalCard {...CHARGING_PILE_DATA} />
-          </div>
-          <div className="DigitalCardWrap_1">
-            <DigitalCard {...CHARGING_PILE_DATA} />
-            <DigitalCard {...CHARGING_PILE_DATA} />
-          </div>
+        <div className="DigitalCardWrap">
+          <DigitalCard {...CHARGING_PILE_STATUS} />
+          <DigitalCard {...CHARGING_PILE_DATA} />
+        </div>
+        <div className="MiddleCardWrap">
+          
+        </div>
+        <div className="DigitalCardWrap">
+          <DigitalCard {...CHARGING_PILE_DATA} />
+          <DigitalCard {...CHARGING_PILE_STATUS} />
         </div>
       </div>
     )

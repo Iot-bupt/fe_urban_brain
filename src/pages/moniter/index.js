@@ -2,12 +2,14 @@ import React, { Component } from 'react'
 import './style.css';
 import { Button, Layout, Menu, Icon, } from 'antd';
 import { BrowserRouter as Router, Route, Link, Redirect, withRouter, Switch } from "react-router-dom";
+import { Player } from 'video-react';
 import backgroundImgUrl from './../../static/image/world_neo.jpg';
 import pin1 from './static/images/pin1.png';
 import ThreeDMap from './components/threeDMap';
 //import { POINT_CONVERSION_UNCOMPRESSED } from 'constants';
 import DigitalCard from '../../components/digitalCard';
 import moniter_demo from './../../static/image/moniter_demo.png' ;
+import "./static/video-react.css";
 
 const { Header, Content, Sider } = Layout;
 const SubMenu = Menu.SubMenu;
@@ -165,6 +167,19 @@ class PublicSafety extends Component {
       }
     }, Cesium.ScreenSpaceEventType.MOUSE_MOVE);
   }
+
+  renderMoniter = () => {
+    return(
+      <Player
+      autoPlay
+      playsInline
+      poster="/assets/poster.png"
+      src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
+      //src="http://10.112.217.199:8081/hls/test1.m3u8" //@todo 支持m3u8
+    />
+    )
+  }
+
   render() {
     if (this.state.flag) {
       return <Redirect to='/inside' />
@@ -179,7 +194,8 @@ class PublicSafety extends Component {
           </div>
           <div className="graphicWrap_2">
             <DigitalCard {...CHARGING_PILE_DATA} />
-            <img src={moniter_demo} height="200px" width="300px"/>
+            {/* <img src={moniter_demo} height="200px" width="300px"/> */}
+            {this.renderMoniter()}
           </div>
         </div>
       </div>
