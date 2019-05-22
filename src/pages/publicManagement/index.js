@@ -173,12 +173,12 @@ class PublicSafety extends Component {
         <div className="publicSafetyWrap">
           <div id="map"></div>
           <div className="graphicWrap_1">
-            <DigitalCard {...CHARGING_PILE_DATA} />
-            <DigitalCard {...CHARGING_PILE_DATA} />
+            <div className="cardBorder_management"><DigitalCard {...CHARGING_PILE_DATA} /></div>
+            <div className="cardBorder_management"><DigitalCard {...CHARGING_PILE_DATA} /></div>
           </div>
           <div className="graphicWrap_2">
-            <DigitalCard {...CHARGING_PILE_DATA} />
-            <DigitalCard {...CHARGING_PILE_DATA} />
+            <div className="cardBorder_management"><DigitalCard {...CHARGING_PILE_DATA} /></div>
+            <div className="cardBorder_management"><DigitalCard {...CHARGING_PILE_DATA} /></div>
           </div>
         </div>
       </div>

@@ -4,18 +4,29 @@
   flex-direction: row;
 }
 
-.DigitalCardWrap{
+.SideRowWrap{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px 40px;
+  padding: 20px 20px;
   flex: 1;
 }
 
-.MiddleCardWrap{
+.MiddleRowWrap{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px 40px;
-  flex: 2;
+  padding: 20px 20px;
+  flex: 1.5;
+}
+
+.cardBorder{
+  background-color: rgba(13, 69, 153, 0.1);
+  margin-bottom: 10px;
+  border: 1px solid rgba(13, 69, 153, 0.5);
+  box-shadow: 3px 3px 20px #464545;
+}
+
+#barWrap{
+  height: 100%;
 }

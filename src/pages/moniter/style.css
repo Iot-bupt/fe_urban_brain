@@ -61,3 +61,11 @@
   left: 400px;
   z-index: 200;
 }
+
+.cardBorder_monitor{
+  width: 350px;
+  background-color: rgba(13, 69, 153, 0.2);
+  margin:20px 30px;
+  border: 1px solid rgba(13, 69, 153, 0.5);
+  box-shadow: 3px 3px 20px #464545;
+}
