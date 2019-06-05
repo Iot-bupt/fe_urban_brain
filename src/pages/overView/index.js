@@ -7,12 +7,12 @@ import Radar from '../../components/charts/radar';
 import Bar from '../../components/charts/bar';
 
 
-const CHARGING_PILE_DATA = {
+const parkingGeoData_card = {
   title: '停车地磁使用情况',
   items: [
     {
       icon: '',
-      name: '已用',
+      name: '可用',
       count: 10,
     },
     {
@@ -22,7 +22,7 @@ const CHARGING_PILE_DATA = {
     }
   ]
 }
-const CHARGING_PILE_STATUS = {
+const chargingPileData_card = {
   title: '充电桩使用情况',
   items: [
     {
@@ -38,17 +38,23 @@ const CHARGING_PILE_STATUS = {
   ]
 }
 
-const pieDataA = [
-  {value: 2, name: "已使用"},
-  {value: 3, name: "未使用"},
-  {value: 1, name: "不可使用"}
-]
+const parkingAreaData_pie = {
+  title: '停车位使用情况',
+  data : [
+    {value: 2, name: "已使用"},
+    {value: 3, name: "未使用"},
+    {value: 1, name: "不可使用"}
+  ]
+}
 
-const pieDataB = [
-  {value: 5, name: "维修中"},
-  {value: 1, name: "掉线"},
-  {value: 6, name: "在线"}
-]
+const chargingPileData_pie = {
+  title: '充电桩使用情况',
+  data : [
+    {value: 5, name: "维修中"},
+    {value: 1, name: "掉线"},
+    {value: 6, name: "在线"}
+  ]
+}
 
 class OverView extends Component {
 
@@ -57,15 +63,15 @@ class OverView extends Component {
       <div className="overViewContainer">
         <div className="SideRowWrap">
           <div className="cardBorder"><Radar /></div>
-          <div className="cardBorder"><Pie data={ pieDataA }/></div>  
+          <div className="cardBorder"><Pie { ...parkingAreaData_pie }/></div>  
         </div>
         <div className="MiddleRowWrap">
           <div className="cardBorder" id="barWrap"><Bar /></div>
         </div>
         <div className="SideRowWrap">
-          <div className="cardBorder"><Pie data={ pieDataB }/></div>
-          <div className="cardBorder"><DigitalCard {...CHARGING_PILE_DATA}/></div>
-          <div className="cardBorder"><DigitalCard {...CHARGING_PILE_STATUS}/></div>          
+          <div className="cardBorder"><Pie { ...chargingPileData_pie }/></div>
+          <div className="cardBorder"><DigitalCard {...parkingGeoData_card}/></div>
+          <div className="cardBorder"><DigitalCard {...chargingPileData_card}/></div>          
         </div>
       </div>
     )

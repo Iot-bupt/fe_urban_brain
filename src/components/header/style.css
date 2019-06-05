@@ -2,13 +2,14 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  border-bottom: 1px solid #2a4e996e;
+  border-bottom: 1px solid #2a4e9926;
   background-color: rgba(32,39,55,0.8);
 }
 
 .title{
   display: flex;
   flex-direction: row;
+  line-height: 40px;
 }
 
 .text{

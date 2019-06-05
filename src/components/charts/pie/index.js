@@ -21,16 +21,16 @@ class Pie extends Component {
   }
 
   initPieChart() {
-    const { data } = this.props
+    const { data, title } = this.props
     let myChart = echarts.init(this.refs.pieChart)
-    let options = this.setOption(data)
+    let options = this.setOption(data, title)
     myChart.setOption(options)
   }
   
-  setOption(data) {
+  setOption(data, title) {
     return {
       title:{
-        text:"充电桩使用情况",
+        text: title,
         left:"center",
         textStyle:{
           color: 'white'

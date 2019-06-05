@@ -15,7 +15,7 @@ const MyIcon = Icon.createFromIconfontCN({
   scriptUrl: '//at.alicdn.com/t/font_1185530_daufza148oe.js',
 })
 
-const CHARGING_PILE_DATA = {
+const chargingPileData_card = {
   title: '充电桩使用情况',
   items: [
     {
@@ -27,6 +27,54 @@ const CHARGING_PILE_DATA = {
       icon: '',
       name: '空闲',
       count: 10,
+    }
+  ]
+}
+
+const parkingAreaData_card = {
+  title: '停车位使用情况',
+  items: [
+    {
+      icon: '',
+      name: '使用中',
+      count: 175,
+    },
+    {
+      icon: '',
+      name: '可停车',
+      count: 25,
+    }
+  ]
+}
+
+const infraredSensorsData_card = {
+  title: '红外线感应器使用情况',
+  items: [
+    {
+      icon: '',
+      name: '工作中',
+      count: 26,
+    },
+    {
+      icon: '',
+      name: '异常',
+      count: 2,
+    }
+  ]
+}
+
+const fireControllerData_card = {
+  title: '消防柱状态监控',
+  items: [
+    {
+      icon: '',
+      name: '正常',
+      count: 75,
+    },
+    {
+      icon: '',
+      name: '损坏',
+      count: 5,
     }
   ]
 }
@@ -173,12 +221,12 @@ class PublicSafety extends Component {
         <div className="publicSafetyWrap">
           <div id="map"></div>
           <div className="graphicWrap_1">
-            <div className="cardBorder_management"><DigitalCard {...CHARGING_PILE_DATA} /></div>
-            <div className="cardBorder_management"><DigitalCard {...CHARGING_PILE_DATA} /></div>
+            <div className="cardBorder_management"><DigitalCard {...chargingPileData_card} /></div>
+            <div className="cardBorder_management"><DigitalCard {...parkingAreaData_card} /></div>
           </div>
           <div className="graphicWrap_2">
-            <div className="cardBorder_management"><DigitalCard {...CHARGING_PILE_DATA} /></div>
-            <div className="cardBorder_management"><DigitalCard {...CHARGING_PILE_DATA} /></div>
+            <div className="cardBorder_management"><DigitalCard {...fireControllerData_card} /></div>
+            <div className="cardBorder_management"><DigitalCard {...infraredSensorsData_card} /></div>
           </div>
         </div>
       </div>

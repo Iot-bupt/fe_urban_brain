@@ -6,6 +6,7 @@ import { Player } from 'video-react';
 import backgroundImgUrl from './../../static/image/world_neo.jpg';
 import pin1 from './static/images/pin1.png';
 import ThreeDMap from './components/threeDMap';
+import HLSSource from './components/hlsSource';
 //import { POINT_CONVERSION_UNCOMPRESSED } from 'constants';
 import DigitalCard from '../../components/digitalCard';
 import moniter_demo from './../../static/image/moniter_demo.png' ;
@@ -174,9 +175,13 @@ class PublicSafety extends Component {
       autoPlay
       playsInline
       poster="/assets/poster.png"
-      src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
-      //src="http://10.112.217.199:8081/hls/test1.m3u8" //@todo 支持m3u8
-    />
+      //src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
+      >
+        <HLSSource
+                isVideoChild
+                ref='hlsSource'
+                src='http://10.112.217.199:8081/hls/test1.m3u8' />
+    </Player>
     )
   }
 
