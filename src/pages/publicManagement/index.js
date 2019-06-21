@@ -6,7 +6,12 @@ import backgroundImgUrl from './../../static/image/world_neo.jpg';
 import pin1 from './static/images/pin1.png';
 import ThreeDMap from './components/threeDMap';
 //import { POINT_CONVERSION_UNCOMPRESSED } from 'constants';
-import DigitalCard from '../../components/digitalCard';
+
+import DigitalCard from '../../components/card/digitalCard';
+import Pie from '../../components/charts/pie';
+import BarCard from '../../components/card/barCard';
+import Table from '../../components/table';
+
 
 const { Header, Content, Sider } = Layout;
 const SubMenu = Menu.SubMenu;
@@ -14,6 +19,10 @@ const SubMenu = Menu.SubMenu;
 const MyIcon = Icon.createFromIconfontCN({
   scriptUrl: '//at.alicdn.com/t/font_1185530_daufza148oe.js',
 })
+
+const parkingGeoData_table = {
+  title: '停车地磁使用情况',
+}
 
 const chargingPileData_card = {
   title: '充电桩使用情况',
@@ -28,6 +37,15 @@ const chargingPileData_card = {
       name: '空闲',
       count: 10,
     }
+  ]
+}
+
+const parkingAreaData_pie = {
+  title: '停车位使用情况',
+  data : [
+    {value: 2, name: "已使用"},
+    {value: 3, name: "未使用"},
+    {value: 1, name: "不可使用"}
   ]
 }
 
@@ -63,18 +81,33 @@ const infraredSensorsData_card = {
   ]
 }
 
-const fireControllerData_card = {
-  title: '消防柱状态监控',
+const chargingPileData_bar_card = {
+  title: '各街道停车位占比',
   items: [
     {
       icon: '',
-      name: '正常',
-      count: 75,
+      name: '沿河街道',
+      count: 20,
     },
     {
       icon: '',
-      name: '损坏',
-      count: 5,
+      name: '十里河街道',
+      count: 50,
+    },
+    {
+      icon: '',
+      name: '万岁街道',
+      count: 15,
+    },
+    {
+      icon: '',
+      name: '上庄街道',
+      count: 73,
+    },
+    {
+      icon: '',
+      name: '沙河街道',
+      count: 11,
     }
   ]
 }
@@ -220,13 +253,13 @@ class PublicSafety extends Component {
       <div className="publicSafetyContainer">
         <div className="publicSafetyWrap">
           <div id="map"></div>
+          <div className="graphicWrap_2">
+            <div className="cardBorder_management" style={{width:'400px'}}><BarCard {...chargingPileData_bar_card}/></div>
+            <div className="cardBorder_management" style={{width:'400px'}}><Table {...parkingGeoData_table} /></div>
+          </div>
           <div className="graphicWrap_1">
             <div className="cardBorder_management"><DigitalCard {...chargingPileData_card} /></div>
-            <div className="cardBorder_management"><DigitalCard {...parkingAreaData_card} /></div>
-          </div>
-          <div className="graphicWrap_2">
-            <div className="cardBorder_management"><DigitalCard {...fireControllerData_card} /></div>
-            <div className="cardBorder_management"><DigitalCard {...infraredSensorsData_card} /></div>
+            <div className="cardBorder_management"><Pie { ...parkingAreaData_pie }/></div>
           </div>
         </div>
       </div>

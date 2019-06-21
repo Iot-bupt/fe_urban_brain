@@ -8,7 +8,7 @@ export default class HLSSource extends Component {
   }
 
   componentDidMount() {
-    // this.setHls()
+    this.setHls()
   }
   componentWillReceiveProps() {
     

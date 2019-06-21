@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.css';
 
-import carIcon from "./../../static/image/car.png";
+import carIcon from "./../../../static/image/car.png";
 
 const DigitalCard = (data) => {
   const { title, items } = data

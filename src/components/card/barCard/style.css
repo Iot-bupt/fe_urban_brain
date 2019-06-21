@@ -1,0 +1,61 @@
+.bar_digitalCardContainer{
+  padding: 20px 20px;
+}
+
+.bar_cardTitle{
+  font-weight: 500;
+  font-size: 20px;
+  color: white;
+}
+
+.bar_cardContent{
+  padding: 10px 0;
+}
+
+.bar_cardItemContent{
+  display: flex;
+  flex-direction: row;
+}
+
+.bar_itemContent{
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+
+.bar_itemIcon{
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.bar_itemContext{
+  display: flex;
+  margin-left: 10px;
+  width: 100%;
+}
+
+.bar_itemTitle{
+  color: white;
+  width: 80px;
+  margin-right: 10px;
+  text-align: left;
+  overflow: hidden;
+}
+
+.bar_itemBar{
+  width: 150px;
+  background-color: rgba(220, 220, 220, 0.027);
+  margin-right: 20px;
+}
+
+.bar_itemBar_color{
+  height: 100%;
+  background-color: #fff;
+}
+
+.bar_itemNumber{
+  color: white;
+} 

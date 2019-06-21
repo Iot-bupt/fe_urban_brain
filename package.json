@@ -116,6 +116,7 @@
       "^react-native$": "react-native-web",
       "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
     },
+    "proxy":"http://10.112.217.199:8081",
     "moduleFileExtensions": [
       "web.js",
       "js",
